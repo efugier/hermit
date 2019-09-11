@@ -885,6 +885,15 @@ a.footnote-ref {
 
   #menu-btn {
     display: inline-block;
+   display: inline-block;     
+   position: relative;    
+   z-index: 1;     
+   padding-right: 2em;     
+   padding-left: 2em;     
+   padding-bottom: 2em;     
+   margin-right: -2em;
+   margin-left: -2em;
+   margin-bottom: -2em;
   }
 
   .posts-group {
