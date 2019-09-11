@@ -23,6 +23,7 @@ html {
   line-height: 1.6;
   letter-spacing: .06em;
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body,
@@ -225,7 +226,7 @@ table {
 #site-header {
   position: fixed;
   z-index: 1;
-  bottom: 0;
+  top: 0;
   width: 100%;
   box-sizing: border-box;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
@@ -684,6 +685,9 @@ a.footnote-ref {
   left: 50%;
   top: 0;
   display: none;
+  overflow-y: auto;
+  max-height: 60%;
+  word-wrap: break-word;
 }
 
 .toc-title {
@@ -860,6 +864,20 @@ a.footnote-ref {
 
 @media (max-width: 760px) {
 
+  #site-header {
+    top: unset;
+    bottom: 0;
+  }
+
+  #home-title {
+    overflow-wrap: break-word;
+    font-size: 1.1em;
+    // font-size: 4vw;
+    // word-wrap: break-word;
+  }
+  #home-subtitle {
+    font-size: 0.5em;
+  }
   .hide-in-mobile,
   .site-nav.hide-in-mobile {
     display: none;

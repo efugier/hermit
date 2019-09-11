@@ -32,17 +32,22 @@ const listen = (ele, e, callback) => {
 //
 let header = document.getElementById('site-header');
 let lastScrollPosition = window.pageYOffset;
+let isMobile = window.matchMedia( "(max-width: 760px)" ).matches;
 
 const autoHideHeader = () => {
-  let currentScrollPosition = Math.max(window.pageYOffset, 0);
-  if (currentScrollPosition > lastScrollPosition) {
-    header.classList.remove('slideInUp');
-    header.classList.add('slideOutDown');
-  } else {
-    header.classList.remove('slideOutDown');
-    header.classList.add('slideInUp');
+  isMobile = window.matchMedia( "(max-width: 760px)" ).matches;
+
+  if (isMobile) {
+    let currentScrollPosition = Math.max(window.pageYOffset, 0);
+    if (currentScrollPosition > lastScrollPosition) {
+      header.classList.remove('slideInUp');
+      header.classList.add('slideOutDown');
+    } else{
+      header.classList.remove('slideOutDown');
+      header.classList.add('slideInUp');
+    }
+    lastScrollPosition = currentScrollPosition;
   }
-  lastScrollPosition = currentScrollPosition;
 }
 
 // Mobile Menu Toggle
