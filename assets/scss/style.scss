@@ -888,9 +888,11 @@ a.footnote-ref {
    display: inline-block;     
    position: relative;    
    z-index: 1;     
+   padding-top: 0.7em;
    padding-right: 2em;     
    padding-left: 2em;     
    padding-bottom: 2em;     
+   margin-top: -0.7em;
    margin-right: -2em;
    margin-left: -2em;
    margin-bottom: -2em;
