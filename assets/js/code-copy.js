@@ -30,7 +30,7 @@
 
   function addCopyButton(containerEl) {
     var copyBtn = document.createElement("button");
-    copyBtn.className = "highlight-copy-btn";
+    copyBtn.className = "highlight-copy-btn hide-in-mobile";
     copyBtn.textContent = "Copy";
 
     var codeEl = containerEl.firstElementChild;
